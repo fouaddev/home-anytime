@@ -1,0 +1,72 @@
+$main-text-color: #484848;
+$light-gray-color: #e9e9e9;
+$green-color: #16861a;
+
+$main-text-color: #32323a;
+$main-bg-color: #5c3e60;
+$green: #92c53c;
+$blue: #335c67;
+
+.bwm-card {
+  color: $main-text-color;
+  margin: 9px;
+  border: none;
+
+  .card-img-top {
+    border-radius: 4px;
+  }
+
+  // When a rental card is hovered on, highlights its rental image
+  &:hover .card-img-top {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    transition: opacity 300ms linear 200ms, 400ms ease-in-out 5ms;
+    transform: scale(1.03);
+  }
+
+  .card-block {
+    margin-top: 7px;
+
+    .card-subtitle {
+      margin: 0;
+      font-weight: 500;
+      font-size: 12px;
+    }
+    
+    .card-title {
+      font-size: 18px;
+      margin: 3px 0;
+      color: $main-bg-color;
+    }
+
+    .card-text {
+      font-size: 13px;
+      font-weight: 300;
+      color: $main-text-color;
+      margin-bottom: 0;
+      
+      .alert-info {
+        padding: 3px;
+        border-radius: 9px;
+      }
+
+    }
+
+  }
+
+}
+
+.condo {
+  color: red;
+}
+
+.apartment {
+  color: green;
+}
+
+.villa {
+  color: blue;
+}
+
+.house {
+  color: purple;
+}

@@ -1,0 +1,164 @@
+$main-text-color: rgb(50, 50, 58);
+$green: rgb(146, 197, 60);
+$light-green: rgb(150, 150, 5);
+$blue: rgb(51, 92, 103);
+$light-blue: rgb(5, 150, 150);
+$purple: rgb(92, 62, 96);
+$light-purple: rgb(150, 5, 150);
+$red: rgb(150, 5, 5);
+$light-red: rgb(200, 0, 0);
+
+#rental-detail {
+  .upper-section {
+    
+    &:hover {
+      padding: 20px 0 15px 0;
+    }
+    
+    .row {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+      // Hides the row container to Prevents :hover from triggering 
+      // in the gaps between images
+      visibility: hidden;
+      
+      & > * {
+        // Brings the images back in, even though the parent is "hidden"
+        visibility: visible;
+        // Makes the fades smooth with a slight delay to prevent the image 
+        // from instantly fading in and out when hovering over it
+        transition: opacity 300ms linear 200ms, transform 400ms ease-in-out 5ms;
+      }
+
+      // Fades out and scale down all images when the row container is hovered on
+      &:hover > * {
+        opacity: 0.5;
+        transform: scale(0.3);
+
+        @media (max-width: 600px) {
+          transform: scale(0.97);
+        }
+      }
+
+      // Fades in and scale up the hovered on image
+      & > *:hover {
+        opacity: 1;
+        transform: scale(1.7);
+        transition-delay: 0ms;
+        
+        @media (max-width: 600px) {
+          transform: scale(1.03);
+        }
+
+        &:hover img {
+          border: 2px solid $main-text-color;
+        }
+      }
+
+      .col-md-3 {
+        padding: 10px;
+        margin: 0;
+
+        img {
+          border-radius: 9px;
+          width: 100%;
+        }
+      }
+    }
+    margin-bottom: 30px;
+  }
+
+  .details-section {
+    color: $main-text-color;
+
+    .rental {
+      &-type {
+        font-size: 14px;
+        font-weight: 300;
+        margin: 0;
+      }
+
+      &-title {
+        margin-bottom: 5px;
+        font-size: 32px;
+        font-weight: 700;
+        color: $purple;
+      }
+
+      &-city {
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 20px;
+      }
+
+      &-room-info {
+        margin-bottom: 20px;
+        font-weight: 300;
+        font-size: 16px;
+
+        span {
+          margin-right: 10px;
+        }
+
+        i {
+          margin-right: 2px;
+        }
+      }
+
+      &-description {
+        font-weight: 300;
+        margin-bottom: 30px;
+      }
+
+      &-assets {
+        .title {
+          margin-bottom: 10px;
+          font-weight: 700;
+          font-size: 22px;
+        }
+        span {
+          display: block;
+          margin-bottom: 15px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .map-wrapper {
+      width: auto;
+      // height: 80vh;
+      border: 2px solid #000;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+      & > * {
+        margin: 0;
+        padding: 0;
+      }
+
+      & > img {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.condo {
+  color: $light-red;
+}
+
+.apartment {
+  color: $light-green;
+}
+
+.villa {
+  color: $light-purple;
+}
+
+.house {
+  color: $light-red;
+}

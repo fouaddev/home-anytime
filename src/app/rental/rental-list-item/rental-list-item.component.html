@@ -1,0 +1,14 @@
+<!-- <a routerLink='{{rentalItemInput.id}}' class="card-link"> -->
+  <a [routerLink]='[rentalItemInput._id]' class="card-link">
+    <div class="card bwm-card">
+      <img class="card-img-top" src="{{ rentalItemInput.images[0] }}" alt="{{ rentalItemInput.category }}">
+      
+      <div class="card-block">
+        <h6 class="text-center card-subtitle">{{ rentalItemInput.shared? 'Shared': 'Entire' }} <span class="{{ rentalItemInput.category }}">{{ rentalItemInput.category | ucwords }}</span> &#183; {{ rentalItemInput.bedrooms + 2 }} Guests</h6>
+        <h4 class="card-title">{{ rentalItemInput.title | ucwords }} </h4>
+        <p class="card-text">${{ rentalItemInput.dailyRate }} / Night <mark class='alert-info'>Free&#183;Cancelation</mark></p>
+        <em class='card-text'>{{ rentalItemInput.bedrooms > 0? rentalItemInput.bedrooms + ' Rooms': rentalItemInput.bedrooms + ' Room' }}</em>
+      </div>
+    </div>
+  </a>
+  

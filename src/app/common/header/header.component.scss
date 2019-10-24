@@ -1,0 +1,44 @@
+// @import "variables";
+$main-color: #5c3e60;
+$main-text-color: #484848;
+$light-gray-color: #e9e9e9;
+
+.navbar {
+  padding: 20px;
+
+  .bwm-search {
+    height: 50px;
+    width: 300px;
+  }
+
+  .navbar-brand {
+    margin-right: 30px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: $main-color;
+    font-weight: 500;
+
+    img {
+      width: 60px;
+      margin: 0 10px;
+
+    }
+
+  }
+
+  .nav-item {
+    font-size: 14px;
+  }
+
+  .btn-bwm-search {
+    border-color: #F44336;
+    color: $main-color;
+
+    &:hover, &:focus, &:active {
+      background-color: transparent;
+      border-color: #F44336 !important;
+      color: $main-color !important;
+      box-shadow: none;
+    }
+  }
+}

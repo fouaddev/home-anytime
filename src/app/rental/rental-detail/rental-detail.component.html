@@ -1,0 +1,50 @@
+<section id="rental-detail" class="container" *ngIf="rental">
+  <div class="upper-section">
+    <div class='row'>
+      <div *ngFor="let image of rental.images" class='col-md-3 col-sm-6'>
+        <img src="{{image}}" alt="">
+      </div>
+    </div>
+  </div>
+  
+  <div class="details-section">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="rental">
+          <h2 class="rental-type">{{ rental.shared ? ('Shared' | ucwords) : ('Entire' | ucwords) }} <span class='{{ rental.category }}'>{{rental.category | ucwords }}</span></h2>
+          <h1 class="rental-title">{{ rental.title | ucwords }}</h1>
+          <h2 class="rental-city">{{ rental.city | ucwords }}</h2>
+          <div class="rental-room-info">
+            <span><i class="fa fa-building"></i>{{ rental.bedrooms }} bedrooms</span>
+            <span><i class="fa fa-user"></i> {{ rental.bedrooms + 4 }} guests</span>
+            <span><i class="fa fa-bed"></i> {{ rental.bedrooms + 2 }} beds</span>
+          </div>
+          <p class="rental-description">
+            {{rental.description}}
+          </p>
+          <hr>
+          <div class="rental-assets">
+            <h3 class="title">Assets</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <span><i class="fa fa-asterisk"></i> Cooling</span>
+                <span><i class="fa fa-thermometer"></i> Heating</span>
+                <span><i class="fa fa-location-arrow"></i> Iron</span>
+              </div>
+              <div class="col-md-6">
+                <span><i class="fa fa-desktop"></i> Working area</span>
+                <span><i class="fa fa-cube"></i> Washing machine</span>
+                <span><i class="fa fa-cube"></i> Dishwasher</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-wrapper col-md-6">
+        <h3>{{ rental.street + ', ' + rental.city }}</h3>
+        <img src="{{ location }}">
+      </div>
+    </div>
+  </div>
+</section>

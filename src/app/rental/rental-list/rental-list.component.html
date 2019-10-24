@@ -1,0 +1,8 @@
+<section id="rentalListing">
+  <h1 class="title">Your next stay is few clicks away!</h1>
+  <div class="row">
+    <div class='col-md-3 col-xs-6' *ngFor="let rentalItem of rentalList">
+      <mha-rental-list-item [rentalItemInput]='rentalItem'></mha-rental-list-item>
+    </div>
+  </div>
+</section>
