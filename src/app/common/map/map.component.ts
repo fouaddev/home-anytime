@@ -14,7 +14,8 @@ export class MapComponent implements OnInit {
   lat: number;
   lng: number;
   
-  zoom: number = 15;
+  zoom: number = 13;
+  errorForCoords = false;
 
   constructor(private mapService:MapService) {}
 
@@ -44,10 +45,8 @@ export class MapComponent implements OnInit {
           localStorage.setItem('rentalCoords', JSON.stringify(rentalGeoInfo));
         },
         (error) => {
-          console.log('\nCoordinates could not be found...\n' + error);
-        },
-        () => {
-          console.log('No errors');
+          console.log('\nError:\n' + error.message + '\n');
+          this.errorForCoords = true;
         }
       );
 
