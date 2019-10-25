@@ -1,7 +1,8 @@
 // @import "variables";
-$main-color: #5c3e60;
-$main-text-color: #484848;
-$light-gray-color: #e9e9e9;
+$main-color: rgb(92, 62, 96);
+$main-text-color: rgb(72, 72, 72);
+$light-gray-color: rgb(233, 233, 233);
+$dark-gray: rgb(40, 40, 40);
 
 .navbar {
   padding: 20px;
@@ -26,8 +27,26 @@ $light-gray-color: #e9e9e9;
 
   }
 
+  .ml-auto:last-child {
+    border-bottom: 2px solid rgb(92, 62, 96);
+
+    @media only screen and (max-width: 991px) {
+      margin-top: 10px;
+      border-bottom: none;
+      border-top: 2px solid rgb(92, 62, 96);
+    }
+  }
+
   .nav-item {
     font-size: 14px;
+  }
+
+  .bwm-search {
+    
+    @media only screen and (max-width: 600px) {
+      width: 190px;
+      margin-right: 10px;
+    }
   }
 
   .btn-bwm-search {
