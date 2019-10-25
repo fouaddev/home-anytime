@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 
-export class HeaderComponent { }
+export class HeaderComponent {
+
+  constructor(private eleRef: ElementRef) {}
+
+  public navbarToggle(): void {
+    this.eleRef.nativeElement.querySelector('#navbar-default').classList.toggle('collapse');
+  }
+}
