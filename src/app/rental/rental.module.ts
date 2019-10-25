@@ -10,6 +10,8 @@ import { NgPipesModule } from 'ngx-pipes';
 import { RentalService } from './shared/rental.service';
 import { RentalDetailComponent } from './rental-detail/rental-detail.component';
 
+import { MapModule } from '../common/map/map.module';
+
 const routes: Routes = [
   { path: 'rentals',
     component: RentalComponent,
@@ -31,8 +33,11 @@ const routes: Routes = [
     NgPipesModule,
     CommonModule,
     RouterModule.forChild(routes),
+    MapModule
   ],
-  providers: [RentalService]
+  providers: [
+    RentalService
+  ]
 })
 
 export class RentalModule {};
