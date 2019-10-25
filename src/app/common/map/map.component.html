@@ -1,5 +1,26 @@
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
-<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+<agm-map 
+[latitude]="lat" 
+[longitude]="lng" 
+[zoom]="zoom">
+
+  <agm-circle *ngIf='!errorForCoords && lat && lng'
+    [latitude]="lat" 
+    [longitude]="lng"
+    [radius]="1200"
+    [fillColor]="'rgb(150, 5, 150)'"
+    [fillOpacity]='0.4'>
+  </agm-circle>
+
+  <agm-info-window *ngIf="errorForCoords"
+    [latitude]="0" 
+    [longitude]="0"
+    [maxWidth]="300"
+    [isOpen]=true>
+    Uuuups, there is a problem to find location on the map, we are trying 
+    to resolve problem as fast as possible. Contact the host for additional 
+    information if you are still interested in orering this place. We are sorry for the inconvience.
+  </agm-info-window>
+  
 </agm-map>
