@@ -11,7 +11,7 @@ export class MapService {
 
   geocodeLocation(address: string): Observable<any> {
 
-    const KEY = 'AIzaSyAS3gTjx6D3ft3aJU2cBgdAUSbtOlTsa6U';
+    const KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
     return this.http.get('https://maps.googleapis.com/maps/api/geocode/json?address=' + address + '&key=' + KEY);
 
     // // This is an alternative way to get lat and lng coords
