@@ -2,9 +2,27 @@
 
 This is a peer to peer home rental sharing web app built with the MEAN stack.
 
+## Tech used
+
+HTML 5, CSS 3, SCSS, Bootstrap 4, TypeScript 3, Angular 7, Node.js, Express.js, MongoDB, Mongoose.
+
 ## Global dependencies
 
 To find global dependencies, run: npm list -global --depth 0
+
+## How to run it
+
+You need to install the dependencies, and devDependencies, then you can serve the app by starting your server.
+
+So run the following commands:
+
+$ npm install
+
+$ npm start
+
+NOTE: To open the browser window automatically after the app has been served, use the flag -open or just -o as follows:
+
+$ ng serve -o
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
 
