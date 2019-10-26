@@ -66,8 +66,8 @@ export class RentalDetailComponent implements OnInit {
 //       this.updateRental(rentalID);
       
 //     });
-    
-//     this.KEY = 'XGk1lOBwWRAuvrucgZ5aMUr7N1CFXELz';
+                   
+//     this.KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
 
 //     this.url = `http://www.mapquestapi.com/geocoding/v1/address?key=${this.KEY}&location=${this.rental.street}` + `,` + `${this.rental.city}`;
 //     // this.url = `http://open.mapquestapi.com/geocoding/v2/address?key=${this.KEY}&location=${this.location}`;
