@@ -16,7 +16,7 @@ import { AgmCoreModule } from '@agm/core';
     CommonModule,
     // BrowserModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAS3gTjx6D3ft3aJU2cBgdAUSbtOlTsa6U'
+      apiKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     })
   ],
   exports: [
