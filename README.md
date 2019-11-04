@@ -1,10 +1,10 @@
 # HomeAnytime
 
-This is a peer to peer home rental sharing web app built with the MEAN stack.
+This is a peer to peer home rental sharing web app built with Angular 7.
 
 ## Tech used
 
-HTML 5, CSS 3, SCSS, Bootstrap 4, TypeScript 3, Angular 7, Node.js, Express.js, MongoDB, Mongoose.
+HTML 5, CSS 3, SCSS, Bootstrap 4, TypeScript 3, Angular 7.
 
 ## Global dependencies
 
