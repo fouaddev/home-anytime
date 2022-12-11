@@ -23,7 +23,7 @@
     "ajv": "^6.10.2",
     "bootstrap": "^4.1.0",
     "core-js": "^2.5.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jquery": "^1.9.1",
     "mongoose": "^5.7.6",
     "ngx-pipes": "^2.6.0",
